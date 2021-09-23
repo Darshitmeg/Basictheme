@@ -1,5 +1,17 @@
 {
   "sections": {
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "heading": "You may also like",
+        "image_ratio": "adapt",
+        "show_secondary_image": false,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
+    },
     "main": {
       "type": "main-product",
       "blocks": {
@@ -20,6 +32,16 @@
           "settings": {
             "text": "{{ product.metafields.descriptors.subtitle.value }}",
             "text_style": "subtitle"
+          }
+        },
+        "d30f96af-f9ae-49eb-af4e-7fdaf877b2c1": {
+          "type": "shopify:\/\/apps\/product-reviews\/blocks\/star_rating\/bae150af-8da8-48b2-9867-398188115e5f",
+          "settings": {
+            "stars_fill_color": "#000000",
+            "star_size": 15,
+            "text_align": "center",
+            "product": "{{product}}",
+            "stars_text_empty": "No reviews"
           }
         },
         "price": {
@@ -59,52 +81,30 @@
           "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
           "settings": {
           }
-        },
-        "d30f96af-f9ae-49eb-af4e-7fdaf877b2c1": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/star_rating\/bae150af-8da8-48b2-9867-398188115e5f",
-          "settings": {
-            "stars_fill_color": "#000000",
-            "star_size": 15,
-            "text_align": "center",
-            "product": "{{product}}",
-            "stars_text_empty": "No reviews"
-          }
         }
       },
       "block_order": [
         "vendor",
         "title",
         "subtitle",
+        "d30f96af-f9ae-49eb-af4e-7fdaf877b2c1",
         "price",
         "variant_picker",
         "quantity_selector",
         "buy_buttons",
         "description",
         "share",
-        "78e3b527-4fed-4c2e-9037-c50c851b3ddc",
-        "d30f96af-f9ae-49eb-af4e-7fdaf877b2c1"
+        "78e3b527-4fed-4c2e-9037-c50c851b3ddc"
       ],
       "settings": {
         "enable_sticky_info": true,
         "hide_variants": false,
         "enable_video_looping": false
       }
-    },
-    "product-recommendations": {
-      "type": "product-recommendations",
-      "settings": {
-        "heading": "You may also like",
-        "image_ratio": "adapt",
-        "show_secondary_image": false,
-        "add_image_padding": false,
-        "show_image_outline": true,
-        "show_vendor": false,
-        "show_rating": false
-      }
     }
   },
   "order": [
-    "main",
-    "product-recommendations"
+    "product-recommendations",
+    "main"
   ]
 }
