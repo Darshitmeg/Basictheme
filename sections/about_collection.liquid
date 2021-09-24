@@ -2,7 +2,9 @@
 <p>{{ product.name }}</p>
 {% endfor %}
 
-
+{% for product in collections.all %}
+  <p>{{ product.title }}</p>
+{% endfor %}
 
 {% schema %}
   {
