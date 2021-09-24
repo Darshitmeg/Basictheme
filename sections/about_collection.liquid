@@ -2,7 +2,7 @@
 <p>{{ product.name }}</p>
 {% endfor %}
 
-{% for product in collections.all %}
+{% for product in collection['frontpage'].products %}
   <p>{{ product.title }}</p>
 {% endfor %}
 
