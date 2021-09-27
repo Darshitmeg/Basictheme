@@ -165,6 +165,22 @@
         "desktop_layout": "left",
         "mobile_layout": "column"
       }
+    },
+    "16327428953245477f": {
+      "type": "featured-collection",
+      "settings": {
+        "title": "Featured collection",
+        "collection": "bags",
+        "products_to_show": 4,
+        "show_view_all": false,
+        "swipe_on_mobile": true,
+        "image_ratio": "adapt",
+        "show_secondary_image": true,
+        "add_image_padding": false,
+        "show_image_outline": true,
+        "show_vendor": false,
+        "show_rating": false
+      }
     }
   },
   "order": [
@@ -173,6 +189,7 @@
     "1632742679214184dc",
     "163274276723cbc088",
     "1632742835999f416a",
-    "1632742862fd5c6d77"
+    "1632742862fd5c6d77",
+    "16327428953245477f"
   ]
 }
