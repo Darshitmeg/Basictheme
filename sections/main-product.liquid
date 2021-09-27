@@ -240,7 +240,7 @@
                         </label>
                         {% else %}
                         <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
-                          <span class="swatch--{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">{{ value }} </span>
+                          <span id="swatch--{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}" class="swatch_value">{{ value }} </span>
                         </label>
                       {% endif %}
                       
