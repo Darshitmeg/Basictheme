@@ -33,8 +33,8 @@
         "settings": {
           "color_scheme": "background-1",
           "logo": "shopify:\/\/shop_images\/coollogo_com-2610715.png",
-          "logo_width": 100,
-          "logo_position": "middle-left",
+          "logo_width": 50,
+          "logo_position": "top-center",
           "menu": "main-menu",
           "show_line_separator": true,
           "enable_sticky_header": true
