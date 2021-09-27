@@ -188,9 +188,11 @@ fieldset.product-form__input .form__label {
   color: rgb(var(--color-background));
 }
 .swatch.product-form__input input[type='radio'] + label {
-
   border-radius: 0;
-
+  height: 32px;
+  width: 32px;
+  margin: 0;
+  padding: 0;
 }
 @media screen and (forced-colors: active) {
   .product-form__input input[type=radio]:checked + label {
