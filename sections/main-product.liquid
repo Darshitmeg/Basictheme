@@ -233,13 +233,14 @@
                                 form="product-form-{{ section.id }}"
                                 {% if option.selected_value == value %}checked{% endif %}
                           >
-                        {% if option.name == 'color' %}
+                        {% assign color = option.name | downcase %}
+                        {% if color == 'color'  %}
                         <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}" style="background : {{ product.variants[forloop.index0].metafields.color.value }};">
                         {% comment %}  {{ value }} {% endcomment %} 
                         </label>
                         {% else %}
                         <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
-                          {{ value }}-- {{ option.name }}
+                          {{ value }} 
                         </label>
                       {% endif %}
                       
