@@ -4,9 +4,164 @@
       "type": "main-page",
       "settings": {
       }
+    },
+    "1632742658c56571e1": {
+      "type": "collage",
+      "blocks": {
+        "51a380f4-3dce-490f-9407-e585d40cf2fb": {
+          "type": "image",
+          "settings": {
+            "image_padding": false,
+            "color_scheme": "background-1"
+          }
+        },
+        "bc94c7b1-1d23-4b16-9147-d9e11c7453ab": {
+          "type": "image",
+          "settings": {
+            "image_padding": false,
+            "color_scheme": "background-1"
+          }
+        }
+      },
+      "block_order": [
+        "51a380f4-3dce-490f-9407-e585d40cf2fb",
+        "bc94c7b1-1d23-4b16-9147-d9e11c7453ab"
+      ],
+      "settings": {
+        "heading": "",
+        "desktop_layout": "left",
+        "mobile_layout": "collage"
+      }
+    },
+    "1632742679214184dc": {
+      "type": "collage",
+      "blocks": {
+        "a669875a-0f38-49bc-8252-145d547a1e1e": {
+          "type": "image",
+          "settings": {
+            "image_padding": false,
+            "color_scheme": "background-1"
+          }
+        },
+        "f2398c3b-948d-4af9-8de0-383b7145ad2c": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": "Describe the video",
+            "image_padding": false
+          }
+        }
+      },
+      "block_order": [
+        "a669875a-0f38-49bc-8252-145d547a1e1e",
+        "f2398c3b-948d-4af9-8de0-383b7145ad2c"
+      ],
+      "settings": {
+        "heading": "",
+        "desktop_layout": "left",
+        "mobile_layout": "collage"
+      }
+    },
+    "163274276723cbc088": {
+      "type": "collage",
+      "blocks": {
+        "1ec8d8f6-7a91-46ad-b01c-1ca99dada4f7": {
+          "type": "image",
+          "settings": {
+            "image_padding": false,
+            "color_scheme": "background-1"
+          }
+        },
+        "e382e0a3-cde3-4c2f-95a7-2ece1c2cd63a": {
+          "type": "image",
+          "settings": {
+            "image_padding": false,
+            "color_scheme": "background-1"
+          }
+        },
+        "e98a2cbc-aa47-4799-a4bb-78c23100f020": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "description": "Describe the video",
+            "image_padding": false
+          }
+        }
+      },
+      "block_order": [
+        "1ec8d8f6-7a91-46ad-b01c-1ca99dada4f7",
+        "e382e0a3-cde3-4c2f-95a7-2ece1c2cd63a",
+        "e98a2cbc-aa47-4799-a4bb-78c23100f020"
+      ],
+      "settings": {
+        "heading": "Multimedia collage",
+        "desktop_layout": "left",
+        "mobile_layout": "collage"
+      }
+    },
+    "1632742835999f416a": {
+      "type": "collage",
+      "blocks": {
+        "05e8fe8f-4b95-42c6-bab7-0f696e5bedcc": {
+          "type": "image",
+          "settings": {
+            "image_padding": false,
+            "color_scheme": "background-1"
+          }
+        },
+        "96440a0b-fbf3-470f-9a35-0c981c1d9c47": {
+          "type": "image",
+          "settings": {
+            "image_padding": false,
+            "color_scheme": "background-1"
+          }
+        }
+      },
+      "block_order": [
+        "05e8fe8f-4b95-42c6-bab7-0f696e5bedcc",
+        "96440a0b-fbf3-470f-9a35-0c981c1d9c47"
+      ],
+      "settings": {
+        "heading": "Multimedia collage",
+        "desktop_layout": "left",
+        "mobile_layout": "collage"
+      }
+    },
+    "1632742862fd5c6d77": {
+      "type": "collage",
+      "blocks": {
+        "5bd38a8b-a452-48b0-9f5b-e9cf06bc11d7": {
+          "type": "image",
+          "settings": {
+            "image_padding": false,
+            "color_scheme": "background-1"
+          }
+        },
+        "4fceb902-e541-4cc0-ad7b-012d66523a52": {
+          "type": "image",
+          "settings": {
+            "image_padding": false,
+            "color_scheme": "background-1"
+          }
+        }
+      },
+      "block_order": [
+        "5bd38a8b-a452-48b0-9f5b-e9cf06bc11d7",
+        "4fceb902-e541-4cc0-ad7b-012d66523a52"
+      ],
+      "settings": {
+        "heading": "Multimedia collage",
+        "desktop_layout": "left",
+        "mobile_layout": "collage"
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "1632742658c56571e1",
+    "1632742679214184dc",
+    "163274276723cbc088",
+    "1632742835999f416a",
+    "1632742862fd5c6d77"
   ]
 }
