@@ -75,8 +75,8 @@
         "6abc1f1f-b335-462f-ab44-92f0c89cdbef": {
           "type": "collapsible_tab",
           "settings": {
-            "heading": "Collapsible tab",
-            "content": "",
+            "heading": "Description",
+            "content": "<p>lorem ipsum is simply dummy text.<\/p>",
             "page": "",
             "icon": "none"
           }
