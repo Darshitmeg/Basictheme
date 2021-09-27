@@ -220,6 +220,9 @@
                     {{ product.variants | json }}
                   </script>
                 </variant-radios>
+        
+        {%- elsif  block.settings.picker_type == 'button' -%}
+        
               {%- else -%}
                 <variant-selects class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                   {%- for option in product.options_with_values -%}
