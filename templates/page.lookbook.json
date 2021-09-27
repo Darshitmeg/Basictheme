@@ -41,6 +41,7 @@
         "a669875a-0f38-49bc-8252-145d547a1e1e": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/67708907_901020666948593_6980208638084257089_n_33c37cb2-639b-40d6-bffe-7619c9302022_550x_1.jpg",
             "image_padding": false,
             "color_scheme": "background-1"
           }
@@ -48,7 +49,8 @@
         "f2398c3b-948d-4af9-8de0-383b7145ad2c": {
           "type": "video",
           "settings": {
-            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "cover_image": "shopify:\/\/shop_images\/Helix-multicolor_550x_1.jpg",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=JbeuTrPSV2w&t=22s",
             "description": "Describe the video",
             "image_padding": false
           }
