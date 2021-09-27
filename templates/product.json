@@ -6,7 +6,7 @@
         "db5c281c-4ba0-49c1-af08-031081767566": {
           "type": "popup",
           "settings": {
-            "text": "Pop-up link text",
+            "text": "Size Chart",
             "page": ""
           }
         },
@@ -72,9 +72,13 @@
             "share_label": "Share"
           }
         },
-        "78e3b527-4fed-4c2e-9037-c50c851b3ddc": {
-          "type": "shopify:\/\/apps\/product-reviews\/blocks\/reviews\/bae150af-8da8-48b2-9867-398188115e5f",
+        "6abc1f1f-b335-462f-ab44-92f0c89cdbef": {
+          "type": "collapsible_tab",
           "settings": {
+            "heading": "Collapsible tab",
+            "content": "",
+            "page": "",
+            "icon": "none"
           }
         }
       },
@@ -90,7 +94,7 @@
         "buy_buttons",
         "description",
         "share",
-        "78e3b527-4fed-4c2e-9037-c50c851b3ddc"
+        "6abc1f1f-b335-462f-ab44-92f0c89cdbef"
       ],
       "settings": {
         "enable_sticky_info": true,
