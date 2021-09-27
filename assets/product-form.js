@@ -17,8 +17,7 @@ if (!customElements.get('product-form')) {
       this.cartNotification.setActiveElement(document.activeElement);
 
       submitButton.setAttribute('aria-disabled', true);
-      submitButton.classList.add('loading');
-      this.querySelector('.loading-overlay__spinner').classList.remove('hidden');
+      
 
       const config = fetchConfig('javascript');
       config.headers['X-Requested-With'] = 'XMLHttpRequest';
@@ -42,9 +41,9 @@ if (!customElements.get('product-form')) {
           console.error(e);
         })
         .finally(() => {
-          submitButton.classList.remove('loading');
+          
           submitButton.removeAttribute('aria-disabled');
-          this.querySelector('.loading-overlay__spinner').classList.add('hidden');
+          
         });
     }
 
