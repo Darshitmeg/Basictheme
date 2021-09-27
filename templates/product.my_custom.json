@@ -108,10 +108,10 @@
         "heading": "You may also like",
         "image_ratio": "adapt",
         "show_secondary_image": true,
-        "add_image_padding": true,
-        "show_image_outline": true,
-        "show_vendor": true,
-        "show_rating": true
+        "add_image_padding": false,
+        "show_image_outline": false,
+        "show_vendor": false,
+        "show_rating": false
       }
     }
   },
