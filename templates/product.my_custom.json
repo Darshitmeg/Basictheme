@@ -1,7 +1,7 @@
 {
   "sections": {
     "main": {
-      "type": "main-product",
+      "type": "main_custom",
       "blocks": {
         "db5c281c-4ba0-49c1-af08-031081767566": {
           "type": "popup",
