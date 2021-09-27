@@ -233,11 +233,11 @@
                                 form="product-form-{{ section.id }}"
                                 {% if option.selected_value == value %}checked{% endif %}
                           >
-                        
+                        {% if option.name == 'color' %}
                         <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}" style="background : {{ product.variants[forloop.index0].metafields.color.value }};">
                           {{ value }}
                         </label>
-                      
+                      {% endif %}
                       
                         {%- endfor -%}
                       </fieldset>
