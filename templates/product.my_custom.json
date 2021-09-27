@@ -152,7 +152,7 @@
         "bg": "",
         "title": "Flickity Product Slider",
         "img_width": 200,
-        "cell_align": "center",
+        "cell_align": "left",
         "title_mb": 30,
         "cell_width": "25%",
         "wrap_around": "true",
