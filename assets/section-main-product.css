@@ -194,6 +194,13 @@ fieldset.product-form__input .form__label {
   margin: 0;
   padding: 0;
 }
+.swatch.product-form__input input[type=radio]+label span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
 @media screen and (forced-colors: active) {
   .product-form__input input[type=radio]:checked + label {
     text-decoration: underline;
