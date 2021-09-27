@@ -235,11 +235,11 @@
                           >
                         {% if option.name == 'color' %}
                         <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}" style="background : {{ product.variants[forloop.index0].metafields.color.value }};">
-                        {% comment %}  {{ value }} {% endcomment %}
+                        {% comment %}  {{ value }} {% endcomment %} 
                         </label>
                         {% else %}
                         <label for="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}">
-                          {{ value }}
+                          {{ value }}-- {{ option.name }}
                         </label>
                       {% endif %}
                       
