@@ -72,6 +72,7 @@
         "1ec8d8f6-7a91-46ad-b01c-1ca99dada4f7": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/fence_550x_1.jpg",
             "image_padding": false,
             "color_scheme": "background-1"
           }
@@ -79,6 +80,7 @@
         "e382e0a3-cde3-4c2f-95a7-2ece1c2cd63a": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/17265992_273568689752120_565474247435091968_n_550x_1.jpg",
             "image_padding": false,
             "color_scheme": "background-1"
           }
@@ -86,7 +88,8 @@
         "e98a2cbc-aa47-4799-a4bb-78c23100f020": {
           "type": "video",
           "settings": {
-            "video_url": "https:\/\/www.youtube.com\/watch?v=_9VUPq3SxOc",
+            "cover_image": "shopify:\/\/shop_images\/15803153_1119335364831494_1136873067247566848_n_550x_1.jpg",
+            "video_url": "https:\/\/www.youtube.com\/watch?v=PbEXxU6aW6o",
             "description": "Describe the video",
             "image_padding": false
           }
