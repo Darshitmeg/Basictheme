@@ -11,6 +11,7 @@
         "51a380f4-3dce-490f-9407-e585d40cf2fb": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/beige_550x_1.jpg",
             "image_padding": false,
             "color_scheme": "background-1"
           }
@@ -18,6 +19,7 @@
         "bc94c7b1-1d23-4b16-9147-d9e11c7453ab": {
           "type": "image",
           "settings": {
+            "image": "shopify:\/\/shop_images\/mlouye-helix-sand-banner-mobile-l1_52f4783b-0314-4e87-a7ac-3db1acae3ef7_550x_1.jpg",
             "image_padding": false,
             "color_scheme": "background-1"
           }
