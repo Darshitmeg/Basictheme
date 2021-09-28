@@ -729,7 +729,7 @@ customElements.define('variant-radios', VariantRadios);
 
 
 function newLargeImage(x) {
-  let clickedImage = x.dataset.media.id;
+  let clickedImage = x.dataset.mediaId;
   console.log(clickedImage);
   const newImage = document.querySelector(`[data-media-id="${clickedImage}"]`);
   console.log(newImage);
