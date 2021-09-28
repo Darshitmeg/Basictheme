@@ -110,17 +110,17 @@ endcase
           </div>
         </slider-component>
       </div>
-        <script>
-    function newLargeImage(x) {
-      let clickedImage = x.dataset.mediaId;
-      console.log(clickedImage);
-      const newImage = document.querySelector(`[data-media-id="${clickedImage}"]`);
-      console.log(newImage);
-      const parentData = newImage.parentElement;
-      parentData.prepend(newImage);
-      newImage.style.display = "block";
-    };
-  </script>
+      <script>
+        function newLargeImage(x) {
+          let clickedImage = x.dataset.mediaId;
+          console.log(clickedImage);
+          const newImage = document.querySelector(`[data-media-id="${clickedImage}"]`);
+          console.log(newImage);
+          const parentData = newImage.parentElement;
+          parentData.prepend(newImage);
+          newImage.style.display = "block";
+        };
+      </script>
       {%- if first_3d_model -%}
         <button
           class="button button--full-width product__xr-button"
