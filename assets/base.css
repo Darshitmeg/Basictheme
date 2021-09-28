@@ -2431,7 +2431,7 @@ details-disclosure > details {
   .product-gallery {
   display: flex;
 }
-// Slider buttons are positioned absolutely over the active image
+/* Slider buttons are positioned absolutely over the active image */
 .product-gallery .slider-button {
   position: absolute;
   top: 50%;
@@ -2451,7 +2451,7 @@ details-disclosure > details {
   right: 0;
   border-right-width: 0;
 }
-// Thumbnail navigation will not exceed the height of the active image and will scroll overflowing elements
+/* Thumbnail navigation will not exceed the height of the active image and will scroll overflowing elements */
 .product-gallery__nav {
   width: 140px;
   list-style: none;
@@ -2480,7 +2480,7 @@ details-disclosure > details {
   height: fit-content;
   position: relative;
 }
-// Hide images unless they are the active image
+/* Hide images unless they are the active image */
 .product-gallery__image {
   display: none;
 }
