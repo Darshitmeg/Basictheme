@@ -725,3 +725,12 @@ class VariantRadios extends VariantSelects {
 }
 
 customElements.define('variant-radios', VariantRadios);
+function newLargeImage(x) {
+          let clickedImage = x.dataset.mediaId;
+          console.log(clickedImage);
+          const newImage = document.querySelector(`[data-media-id="${clickedImage}"]`);
+          console.log(newImage);
+          const parentData = newImage.parentElement;
+          parentData.prepend(newImage);
+          newImage.style.display = "block";
+        };
