@@ -64,7 +64,17 @@ function newLargeImage(x) {
         </div>
       </slider-component> -->
       {% endcomment %}
-      
+      <script>
+      function newLargeImage(x) {
+  let clickedImage = x.dataset.thumbId;
+  console.log(clickedImage);
+  const newImage = document.querySelector(`[data-media-id="${clickedImage}"]`);
+  console.log(newImage);
+  const parentData = newImage.parentElement;
+  parentData.prepend(newImage);
+  newImage.style.display = "block";
+};
+      </script>
       <div class="slider-container" >
         <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
           {{ "accessibility.skip_to_product_info" | t }}
