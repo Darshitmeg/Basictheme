@@ -2419,12 +2419,6 @@ details-disclosure > details {
   .gallery-thumbs .swiper-slide-thumb-active {
     opacity: 1;
   }
-  
-  
-  
-  
-  
-  
-  
-  
-  
+  .swiper-container-wrapper.product_slider {
+    width: 100%;
+  }
