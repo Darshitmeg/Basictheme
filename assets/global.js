@@ -505,6 +505,7 @@ customElements.define('deferred-media', DeferredMedia);
 class SliderComponent extends HTMLElement {
   constructor() {
     super();
+    this.productSlider = this.querySelector('.product-slider-box');
     this.slider = this.querySelector('ul');
     this.sliderItems = this.querySelectorAll('li');
     this.pageCount = this.querySelector('.slider-counter--current');
