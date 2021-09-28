@@ -19,21 +19,8 @@
 {%- endif -%}
 
 <section class="page-width">
-  
-
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   <div class="product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper">
-      {% comment %}
       <slider-component class="slider-mobile-gutter">
         <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
           {{ "accessibility.skip_to_product_info" | t }}
@@ -65,7 +52,6 @@
           <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'accessibility.next_slide' | t }}">{% render 'icon-caret' %}</button>
         </div>
       </slider-component>
-      {% endcomment %}
       {%- if first_3d_model -%}
         <button
           class="button button--full-width product__xr-button"
@@ -80,81 +66,6 @@
           {{ 'products.product.xr_button' | t }}
         </button>
       {%- endif -%}
-      <product-gallery class="product-gallery">
-        {%- if product.media.size > 1 -%}
-        <ul class="product-gallery__nav">
-          {%- for media in product.media -%}
-          <li class="product-gallery__nav-item {% if media.id == product.selected_or_first_available_variant.featured_media.id %}product-gallery__nav-item--active{% endif %}" data-media-id="{{ media.id }}">
-            {% render 'product-thumbnail', media: media %}
-          </li>
-          {%- endfor -%}
-        </ul>
-        {%- endif -%}
-        <div class="product-gallery__images">
-          {%- for media in product.media -%}
-          <div class="product-gallery__image {% if media.id == product.selected_or_first_available_variant.featured_media.id or product.media.size == 1 %}product-gallery__image--active{% endif %}" data-media-id="{{ media.id }}">
-            {% render 'product-thumbnail', media: media %}
-          </div>
-          {%- endfor -%}
-          <button type="button" class="slider-button slider-button--prev" name="previous" aria-label="{{ 'accessibility.previous_slide' | t }}">{% render 'icon-caret' %}</button>
-          <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'accessibility.next_slide' | t }}">{% render 'icon-caret' %}</button>
-        </div>
-      </product-gallery>
-      {% comment %}
-      <!-- Slider main wrapper -->
-      <div class="swiper-container-wrapper product_slider">
-        <!-- Slider main container -->
-        <div class="swiper-container gallery-top">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">
-              <div class="title">Responsive vertical thumbnail gallery</div>
-              <div class="description">Scale screen to see effect</div>
-            </div>
-            <div class="swiper-slide">
-              <div class="title">Slide 2</div>
-              <div class="description">Lorem ipsum dolor sit amet</div>
-            </div>
-            <div class="swiper-slide">
-              <div class="title">Slide 3</div>
-              <div class="description">Lorem ipsum dolor sit amet</div>
-            </div>
-            <div class="swiper-slide">
-              <div class="title">Slide 4</div>
-              <div class="description">Lorem ipsum dolor sit amet</div>
-            </div>
-            <div class="swiper-slide">
-              <div class="title">Slide 5</div>
-              <div class="description">Lorem ipsum dolor sit amet</div>
-            </div>
-            <div class="swiper-slide">
-              <div class="title">Slide 6</div>
-              <div class="description">Lorem ipsum dolor sit amet</div>
-            </div>
-          </div>
-          <!-- Add Arrows -->
-          <div class="swiper-button-next"></div>
-          <div class="swiper-button-prev"></div>
-        </div>
-        <!-- Slider thumbnail container -->
-        <div class="swiper-container gallery-thumbs">
-          <!-- Additional required wrapper -->
-          <div class="swiper-wrapper">
-            <!-- Slides -->
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-            <div class="swiper-slide">Slide 4</div>
-            <div class="swiper-slide">Slide 5</div>
-            <div class="swiper-slide">Slide 6</div>
-          </div>
-        </div>
-      </div>
-      {% endcomment %}  
-      
-      
-      
     </div>
     
     <div class="product__info-wrapper grid__item">
