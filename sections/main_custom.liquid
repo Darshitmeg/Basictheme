@@ -489,15 +489,15 @@ endcase
     </modal-dialog>
   {%- endfor -%}
 </section>
- <script>
-function newLargeImage(x) {
-let clickedImage = x.dataset.mediaId;
-const newImage = document.querySelector(`[data-media-id="${clickedImage}"]`);
-const parentData = newImage.parentElement;
-parentData.prepend(newImage);
-newImage.style.display = "block";
-};
-</script>
+  <script>
+    function newLargeImage(x) {
+      let clickedImage = x.dataset.mediaId;
+      const newImage = document.querySelector(`[data-media-id="${clickedImage}"]`);
+      const parentData = newImage.parentElement;
+      parentData.prepend(newImage);
+      newImage.style.display = "block";
+    };
+  </script>
 {% javascript %}
   class ProductModal extends ModalDialog {
     constructor() {
