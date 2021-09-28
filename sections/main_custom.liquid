@@ -14,6 +14,7 @@
     function newLargeImage(x) {
       let clickedImage = x.dataset.mediaId;
       const newImage = document.querySelector(`[data-media-id="${clickedImage}"]`);
+      console.log(newImage);
       const parentData = newImage.parentElement;
       parentData.prepend(newImage);
       newImage.style.display = "block";
