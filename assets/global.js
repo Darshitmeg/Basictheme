@@ -755,13 +755,27 @@ class ProductGallery extends HTMLElement {
     }
   }
 
-  onVariantChange(event) {
-    if (!event.data || event.data.type !== 'variant_changed') return 
-    const currentImage = Array.from(this.images).find(item => item.dataset.mediaId == event.data.variant.featured_media.id)
-    if (currentImage) {
-      this.setCurrentImage(currentImage)
-    }
+onVariantChange() {
+  this.updateOptions();
+  this.updateMasterId();
+  this.toggleAddButton(true, '', false);
+  this.updatePickupAvailability();
+
+  if (!this.currentVariant) {
+    this.toggleAddButton(true, '', true);
+    this.setUnavailable();
+  } else {
+    this.updateMedia();
+    this.updateURL();
+    this.updateVariantInput();
+    this.renderProductInfo();
   }
+  // When variant is changed post a message with the variant's data
+  window.postMessage({
+    type: 'variant_changed',
+    variant: this.currentVariant
+  }, '*')
+}
 
   onNavItemClick(event) {
     const mediaId = event.target.closest('li').dataset.mediaId
