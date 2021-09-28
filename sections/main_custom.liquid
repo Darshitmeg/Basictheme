@@ -67,9 +67,7 @@ function newLargeImage(x) {
       <script>
         function newLargeImage(x) {
           let clickedImage = x.dataset.thumbId;
-          console.log(clickedImage);
           const newImage = document.querySelector(`[data-media-id="${clickedImage}"]`);
-          console.log(newImage);
           const parentData = newImage.parentElement;
           parentData.prepend(newImage);
           newImage.style.display = "block";
