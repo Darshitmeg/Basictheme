@@ -10,17 +10,7 @@
 <link rel="stylesheet" href="{{ 'component-deferred-media.css' | asset_url }}" media="print" onload="this.media='all'">
 
 <script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
-<script>
-function newLargeImage(x) {
-  let clickedImage = x.dataset.mediaId;
-  console.log(clickedImage);
-  const newImage = document.querySelector(`[data-media-id="${clickedImage}"]`);
-  console.log(newImage);
-  const parentData = newImage.parentElement;
-  parentData.prepend(newImage);
-  newImage.style.display = "block";
-};
-</script>
+
 {%- assign first_3d_model = product.media | where: "media_type", "model" | first -%}
 {%- if first_3d_model -%}
   {{ 'component-product-model.css' | asset_url | stylesheet_tag }}
@@ -31,12 +21,11 @@ function newLargeImage(x) {
 <section class="page-width">
   <div class="product grid grid--1-col {% if product.media.size > 0 %}grid--2-col-tablet{% else %}product--no-media{% endif %}">
     <div class="grid__item product__media-wrapper">
-      {% comment %}
-       <!--<slider-component class="slider-mobile-gutter">
+      <slider-component class="slider-mobile-gutter">
         <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
           {{ "accessibility.skip_to_product_info" | t }}
         </a>
-        <ul class="product__media-list grid grid--peek list-unstyled slider slider--desktop slider--mobile" role="list">
+        <ul class="product__media-list grid grid--peek list-unstyled slider slider--mobile" role="list">
           {%- assign variant_images = product.images | where: 'attached_to_variant?', true | map: 'src' -%}
           {%- if product.selected_or_first_available_variant.featured_media != null -%}
             {%- assign media = product.selected_or_first_available_variant.featured_media -%}
@@ -62,80 +51,7 @@ function newLargeImage(x) {
           </div>
           <button type="button" class="slider-button slider-button--next" name="next" aria-label="{{ 'accessibility.next_slide' | t }}">{% render 'icon-caret' %}</button>
         </div>
-      </slider-component> -->
-      {% endcomment %}
-      <script>
-        function newLargeImage(x) {
-          let clickedImage = x.dataset.thumbId;
-          const newImage = document.querySelector(`[data-media-id="${clickedImage}"]`);
-          const parentData = newImage.parentElement;
-          parentData.prepend(newImage);
-          
-          
-          
-          const imgHt = x.clientHeight * 4.5;
-          document.getElementById('large-image').style.PaddingBottom = imgHt + 'px';
-          
-//           newImage.style.display = "block";
-        };
-      </script>
-      <div class="slider-container" >
-        <a class="skip-to-content-link button visually-hidden" href="#ProductInfo-{{ section.id }}">
-          {{ "accessibility.skip_to_product_info" | t }}
-        </a>
-        <ul class="large-image" id="large-image">
-          {%- for media in product.media -%}
-          <li class="large-image-item product__media-item grid__item slider__slide"
-              data-media-id="{{ section.id }}-{{ media.id }}">
-            {% render 'product-thumbnail', media: media, position: forloop.index, loop: section.settings.enable_video_looping, modal_id: section.id, xr_button: true %}
-          </li>
-          {%- endfor -%}
-        </ul>
-
-        <slider-component >
-          <ul class="product-slider-box slider" role="list"> {%- for media in product.media -%}
-            <li class="product-slider slider__slide">
-              {% if media.media_type == 'video' %}
-              <div class="video-btn" style="display: block">
-                <span class="product__media-icon motion-reduce v-btn" aria-hidden="true">
-                  {%- liquid
-case media.media_type
-when 'video' or 'external_video'
-render 'icon-play'
-when 'model'
-render 'icon-3d-model'
-else
-render 'icon-zoom'
-endcase
--%}
-                </span>
-                <img class="slide-image" onclick="newLargeImage(this)"
-                     data-media-id="{{ section.id }}-{{ media.id }}"
-                     src="{{ media.preview_image | img_url: 'large' }}"
-                     alt="{{ thumbnailAlt }}">
-              </div>
-              {% else %}
-              <img class="slide-image" onclick="newLargeImage(this)"
-                   data-thumb-id="{{ section.id }}-{{ media.id }}"
-                   src="{{ media.preview_image | img_url: 'large' }}"
-                   alt="{{ thumbnailAlt }}">
-              {% endif %}
-            </li>
-            {% endfor %}
-          </ul>
-          <div class="slider-buttons {% if product.media.size < 5 %}hidden{% endif %}">
-            <button type="button" class="slider-button slider-button--prev bigger-slider" name="previous" aria-label="{{ 'accessibility.previous_slide' | t }}">{% render 'icon-caret' %}</button>
-            <div class="slider-counter caption">
-              <span class="slider-counter--current">1</span>
-              <span aria-hidden="true"> / </span>
-              <span class="visually-hidden">{{ 'accessibility.of' | t }}</span>
-              <span class="slider-counter--total">{% if section.settings.hide_variants %}{{ product.media.size | minus: variant_images.size | plus: 1 }}{% else %}{{ product.media.size }}{% endif %}</span>
-            </div>
-            <button type="button" class="slider-button slider-button--next bigger-slider" name="next" aria-label="{{ 'accessibility.next_slide' | t }}">{% render 'icon-caret' %}</button>
-          </div>
-        </slider-component>
-      </div>
-
+      </slider-component>
       {%- if first_3d_model -%}
         <button
           class="button button--full-width product__xr-button"
@@ -151,7 +67,6 @@ endcase
         </button>
       {%- endif -%}
     </div>
-    
     <div class="product__info-wrapper grid__item">
       <div id="ProductInfo-{{ section.id }}" class="product__info-container{% if section.settings.enable_sticky_info %} product__info-container--sticky{% endif %}">
         {%- assign product_form_id = 'product-form-' | append: section.id -%}
