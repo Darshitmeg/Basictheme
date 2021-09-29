@@ -144,28 +144,3 @@ slider-component {
 .slider-button--prev:not([disabled]):hover .icon {
   transform: rotate(90deg) translateX(-0.15rem) scale(1.07);
 }
-
-
-@media screen and (min-width: 749px) {
-  .slider.slider--desktop {
-    position: relative;
-    flex-wrap: inherit;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    scroll-padding-left: 1rem;
-    -webkit-overflow-scrolling: touch;
-    margin-bottom: 1rem;
-  }
-
-  .slider.slider--desktop .slider__slide {
-    margin-bottom: 0;
-    padding-bottom: 0;
-  }
-  .slider-buttons {
-    display: block;
-  }
-  .slider--mobile + .slider-buttons {
-    display: block;
-  }
-}
