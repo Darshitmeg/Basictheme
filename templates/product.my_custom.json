@@ -100,7 +100,8 @@
         "show_desktopslider": true,
         "enable_sticky_info": true,
         "hide_variants": false,
-        "enable_video_looping": true
+        "enable_video_looping": true,
+        "alignment": "right"
       }
     },
     "product-recommendations": {
