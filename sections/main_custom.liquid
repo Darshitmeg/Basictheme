@@ -3,9 +3,7 @@
 {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-rte.css' | asset_url | stylesheet_tag }}
- {% if section.setting.show_desktopslider == false %} 
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
-{% endif %}
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
 {{ 'component-loading-overlay.css' | asset_url | stylesheet_tag }}
 
@@ -436,7 +434,7 @@
 </section>
 
   
- {% if section.setting.show_desktopslider == true %} 
+ {% if section.settings.show_desktopslider %} 
   <style>
     slider-component {
       position: relative;
@@ -454,7 +452,7 @@
       flex-shrink: 0;
     }
 
-/*     @media screen and (max-width: 749px) { */
+    @media screen and (max-width: 749px) {
       .slider.slider--mobile {
         position: relative;
         flex-wrap: inherit;
@@ -470,7 +468,7 @@
         margin-bottom: 0;
         padding-bottom: 0;
       }
-/*     } */
+    }
 
     @media screen and (max-width: 989px) {
       .slider.slider--tablet {
@@ -536,13 +534,13 @@
 
     @media screen and (min-width: 990px) {
       .slider-buttons {
-        display: block;
+        display: none;
       }
     }
 
     @media screen and (min-width: 750px) {
       .slider--mobile + .slider-buttons {
-        display: block;
+        display: none;
       }
     }
 
@@ -991,7 +989,7 @@
   "type": "checkbox",
   "id": "show_desktopslider",
   "label": "Show Desktop Slider",
-  "default": false
+  "default": true
 },
     {
       "type": "checkbox",
