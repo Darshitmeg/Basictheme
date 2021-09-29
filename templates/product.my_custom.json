@@ -97,6 +97,7 @@
         "6abc1f1f-b335-462f-ab44-92f0c89cdbef"
       ],
       "settings": {
+        "show_desktopslider": true,
         "enable_sticky_info": true,
         "hide_variants": false,
         "enable_video_looping": true
