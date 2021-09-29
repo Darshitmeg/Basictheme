@@ -70,14 +70,14 @@ function newLargeImage(x) {
           const newImage = document.querySelector(`[data-media-id="${clickedImage}"]`);
           const parentData = newImage.parentElement;
           parentData.prepend(newImage);
-
+          
           const resizeObserver = new resizeObserver(entries => x.clientHeight)
           resizeObserver.observe(document.body)
           const imgHt = x.clientHeight * 4.5;
           document.getElementById('large-image').style.PaddingBottom = imgHt + 'px';
-
-
-          //           newImage.style.display = "block";
+          
+          
+//           newImage.style.display = "block";
         };
       </script>
       <div class="slider-container" >
