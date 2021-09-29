@@ -3,7 +3,7 @@
 {{ 'component-accordion.css' | asset_url | stylesheet_tag }}
 {{ 'component-price.css' | asset_url | stylesheet_tag }}
 {{ 'component-rte.css' | asset_url | stylesheet_tag }}
-{% if show_desktopslider == false %}
+ {% if section.setting.show_desktopslider == false %} 
 {{ 'component-slider.css' | asset_url | stylesheet_tag }}
 {% endif %}
 {{ 'component-rating.css' | asset_url | stylesheet_tag }}
