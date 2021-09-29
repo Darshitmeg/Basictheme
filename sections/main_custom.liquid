@@ -73,6 +73,7 @@ function newLargeImage(x) {
           
           const resizeObserver = new resizeObserver(entries => x.clientHeight)
           resizeObserver.observe(document.body)
+          console.log(resizeObserver);
           const imgHt = x.clientHeight * 4.5;
           document.getElementById('large-image').style.PaddingBottom = imgHt + 'px';
           
