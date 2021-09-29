@@ -107,62 +107,16 @@
       "settings": {
         "heading": "You may also like",
         "image_ratio": "adapt",
-        "show_secondary_image": true,
+        "show_secondary_image": false,
         "add_image_padding": false,
-        "show_image_outline": false,
+        "show_image_outline": true,
         "show_vendor": false,
         "show_rating": false
-      }
-    },
-    "163274764413505ad4": {
-      "type": "slider",
-      "blocks": {
-        "163274764413505ad4-0": {
-          "type": "slide",
-          "settings": {
-            "featured_product": "5-panel-hat"
-          }
-        },
-        "163274764413505ad4-1": {
-          "type": "slide",
-          "settings": {
-            "featured_product": "ayers-chambray"
-          }
-        },
-        "163274764413505ad4-2": {
-          "type": "slide",
-          "settings": {
-            "featured_product": "camp-stool"
-          }
-        },
-        "163274764413505ad4-3": {
-          "type": "slide",
-          "settings": {
-            "featured_product": "canvas-lunch-bag"
-          }
-        }
-      },
-      "block_order": [
-        "163274764413505ad4-0",
-        "163274764413505ad4-1",
-        "163274764413505ad4-2",
-        "163274764413505ad4-3"
-      ],
-      "settings": {
-        "bg": "",
-        "title": "Flickity Product Slider",
-        "img_width": 200,
-        "cell_align": "left",
-        "title_mb": 48,
-        "cell_width": "25%",
-        "wrap_around": "true",
-        "mr": 16
       }
     }
   },
   "order": [
     "main",
-    "product-recommendations",
-    "163274764413505ad4"
+    "product-recommendations"
   ]
 }
