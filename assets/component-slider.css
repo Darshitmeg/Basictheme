@@ -14,7 +14,7 @@ slider-component {
   flex-shrink: 0;
 }
 
-@media screen and (max-width: 2200px) {
+@media screen and (max-width: 749px) {
   .slider.slider--mobile {
     position: relative;
     flex-wrap: inherit;
@@ -32,7 +32,7 @@ slider-component {
   }
 }
 
-@media screen and (max-width: 2200px) {
+@media screen and (max-width: 989px) {
   .slider.slider--tablet {
     position: relative;
     flex-wrap: inherit;
