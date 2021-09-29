@@ -75,9 +75,7 @@ function newLargeImage(x) {
           
           const imgHt = x.clientHeight * 4.5;
           document.getElementById('large-image').style.PaddingBottom = imgHt + 'px';
-          const resizeObserver = new resizeObserver(entries => x.clientHeight)
-          resizeObserver.observe(document.body)
-          console.log(resizeObserver);
+          
 //           newImage.style.display = "block";
         };
       </script>
