@@ -146,7 +146,7 @@ slider-component {
 }
 
 
-@media screen and (max-width: 749px) {
+@media screen and (min-width: 749px) {
   .slider.slider--desktop {
     position: relative;
     flex-wrap: inherit;
