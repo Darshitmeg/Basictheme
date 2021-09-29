@@ -162,4 +162,10 @@ slider-component {
     margin-bottom: 0;
     padding-bottom: 0;
   }
+  .slider-buttons {
+    display: block;
+  }
+  .slider--mobile + .slider-buttons {
+    display: block;
+  }
 }
