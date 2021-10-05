@@ -61,7 +61,9 @@
 {% endcomment %}        
         <div id="Huratips-Pagination">
           {% if paginate.next %}
-          <a href="{{ paginate.next.url }}">Loading More</a>
+          <a href="{{ paginate.next.url }}">
+            <div id="loading-bar-spinner" class="spinner"><div class="spinner-icon"></div></div>        
+          </a>
           {% endif %}  
         </div>
       </div>
