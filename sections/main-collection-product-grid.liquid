@@ -38,6 +38,7 @@
           {% if collection.products_count < 4 %} grid--{{ collection.products_count }}-col-tablet{% else %}
             {% if collection.products_count == 4 %} grid--4-col-desktop{% else %} grid--3-col-tablet grid--one-third-max grid--4-col-desktop grid--quarter-max{% endif %}
           {% endif %}">
+          <div id="Huratips-Loop" >
           {%- for product in collection.products -%}
             <li class="grid__item">
               {% render 'product-card',
@@ -51,6 +52,7 @@
               %}
             </li>
           {%- endfor -%}
+          </div>
         </ul>
 
         {%- if paginate.pages > 1 -%}
@@ -70,11 +72,11 @@
 </script>
 
 
-<div  >
+
       {% for product in collection.products %}
         {% include 'product-grid-item' %}
       {% endfor %}
-</div>
+
 <div id="Huratips-Pagination">
     {% if paginate.next %}
     <a href="{{ paginate.next.url }}">Loading More</a>
