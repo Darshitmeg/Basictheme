@@ -60,7 +60,14 @@
     {%- endif -%}
   {%- endpaginate -%}
 </div>
-
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    var endlessScroll = new Ajaxinate({
+      container: '#Huratips-Loop',
+      pagination: '#Huratips-Pagination'
+    });
+  });
+</script>
 {% schema %}
 {
   "name": "t:sections.main-collection-product-grid.name",
