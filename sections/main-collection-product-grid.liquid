@@ -62,7 +62,7 @@
         <div id="Huratips-Pagination">
           {% if paginate.next %}
           <a href="{{ paginate.next.url }}">
-                    
+            {{ 'spinner.gif' | asset_url | img_tag: 'spinner image' }}   
           </a>
           {% endif %}  
         </div>
