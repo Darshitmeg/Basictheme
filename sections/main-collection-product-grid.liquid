@@ -58,6 +58,12 @@
         {%- if paginate.pages > 1 -%}
           {% render 'pagination', paginate: paginate, anchor: '' %}
         {%- endif -%}
+        
+        <div id="Huratips-Pagination">
+          {% if paginate.next %}
+          <a href="{{ paginate.next.url }}">Loading More</a>
+          {% endif %}  
+        </div>
       </div>
     {%- endif -%}
   {%- endpaginate -%}
