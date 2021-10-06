@@ -24,16 +24,7 @@ tpl:'<div class="fancybox-share"><h1>{{SHARE}}</h1><p><a class="fancybox-share__
 
 
 
-if (window.Shopify.theme_settings.newsletter_popup) {
-  window.newsletter_popup.init();
-}
 
-$(document).on('shopify:section:load', function(e){
-  if (window.Shopify.theme_settings.newsletter_popup) {
-    window.newsletter_popup.init();
-  }
-
-});
 
 
 
@@ -82,3 +73,16 @@ window.newsletter_popup = {
     }
   }
 }
+
+
+
+if (window.Shopify.theme_settings.newsletter_popup) {
+  window.newsletter_popup.init();
+}
+
+$(document).on('shopify:section:load', function(e){
+  if (window.Shopify.theme_settings.newsletter_popup) {
+    window.newsletter_popup.init();
+  }
+
+});
