@@ -144,9 +144,7 @@
     <ul hidden>
       <li id="a11y-refresh-page-message">{{ 'accessibility.refresh_page' | t }}</li>
     </ul>
-  {% if settings.newsletter_popup %}
-      {% render 'popup-newsletter' %}
-    {% endif %}
+
     <script>
       window.routes = {
         cart_add_url: '{{ routes.cart_add_url }}',
@@ -215,6 +213,8 @@
         });
       </script>
     {{ 'custom.js' | asset_url | script_tag }}
-    
+      {% if settings.newsletter_popup %}
+      {% render 'popup-newsletter' %}
+    {% endif %}
   </body>
 </html>
