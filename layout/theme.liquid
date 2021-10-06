@@ -171,6 +171,13 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+      {% render 'js-variable' %}
+    </script>
+
     <script src="{{ 'instantclick.min.js' | asset_url }}" data-no-instant defer></script>
 
       <script data-no-instant>
@@ -204,13 +211,6 @@
           }
         });
       </script>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script>
-      {% render 'js-variable' %}
-    </script>
-
-    
     {{ 'custom.js' | asset_url | script_tag }}
     
   </body>
