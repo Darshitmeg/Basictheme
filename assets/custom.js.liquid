@@ -91,9 +91,9 @@ window.newsletter_popup = {
 
 
 
-if (window.Shopify.theme_settings.newsletter_popup) {
-  window.newsletter_popup.init();
-}
+// if (window.Shopify.theme_settings.newsletter_popup) {
+//   window.newsletter_popup.init();
+// }
 
 $(document).on('shopify:section:load', function(e){
   if (window.Shopify.theme_settings.newsletter_popup) {
