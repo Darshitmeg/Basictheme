@@ -170,7 +170,9 @@
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
     
-    
+    <script>
+      {% render 'js-variables' %}
+    </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     {{ 'slider.js' | asset_url | script_tag }}
     {{ 'custom.js' | asset_url | script_tag }}
