@@ -169,16 +169,13 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    <script>
-      window.Theme = window.Theme || {};
-      window.Theme.version = '7.0.0';
-      window.Theme.name = 'Turbo';
-    </script>
+    
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    {{ 'slider.js' | asset_url | script_tag }}
     <script>
       {% render 'js-variables' %}
     </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    {{ 'slider.js' | asset_url | script_tag }}
     {{ 'custom.js' | asset_url | script_tag }}
     
   </body>
