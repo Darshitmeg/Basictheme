@@ -58,7 +58,9 @@
             </div>
           {% endif %}
 
-          {% render 'newsletter-form' %}
+          {% comment %}{% render 'newsletter-form' %}{% endcomment %}
+          {% section 'newsletter' %}
+          newsletter
         </div>
       </div>
     </div>
