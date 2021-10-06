@@ -57,15 +57,15 @@
 }
 {%- if settings.use_newsletter_border == true -%}
 .newsletter__lightbox .fancybox-content {
-    border: 5px solid {{ settings.border_color }};
-  }
+  border: 5px solid {{ settings.border_color }};
+}
 {%- endif -%}
 
 {%- if settings.newsletter_popup_image_align == 'right' -%}
 
 .newsletter__lightbox .fancybox-close-small {
-    left: 0;
-  }
+  left: 0;
+}
 
 {%- endif -%}
 @media only screen and (max-width: 480px) {
@@ -80,8 +80,8 @@
 }
 {%- if settings.newsletter_popup_close == false -%}
 .newsletter__lightbox .fancybox-close-small {
-    display: none;
-  }
+  display: none;
+}
 {%- endif -%}
 
 .newsletter__lightbox .fancybox-toolbar {
@@ -96,8 +96,8 @@
 }
 {%- if settings.newsletter_popup_image_align == 'right' -%}
 .newsletter-popup {
-    flex-direction: row-reverse;
-  }
+  flex-direction: row-reverse;
+}
 {%- endif -%}
 @media only screen and (max-width: 798px) {
   .newsletter-popup {
@@ -247,17 +247,17 @@
 }
 {%- if settings.newsletter_popup_text_align == 'left' -%}
 .newsletter-popup__button {
-    margin-right: 15px;
-  }
+  margin-right: 15px;
+}
 {%- elsif settings.newsletter_popup_text_align == 'right' -%}
 .newsletter-popup__button {
-    margin-left: 15px;
-  }
+  margin-left: 15px;
+}
 {%- else -%}
 .newsletter-popup__button {
-    margin-left: 8px;
-    margin-right: 8px;
-  }
+  margin-left: 8px;
+  margin-right: 8px;
+}
 {%- endif -%}
 @media only screen and (max-width: 480px) {
   .newsletter-popup__button {
@@ -267,29 +267,29 @@
 
 .newsletter-popup__button--text {
   --button-color-border: {{ settings.newsletter_popup_color }};
-  --button-color-background: transparent;
-  --button-color-text: {{ settings.newsletter_popup_color }};
-  --button-color-border-hover: {{ settings.newsletter_popup_color }};
-  --button-color-background-hover: {{ settings.newsletter_popup_color }};
-  --button-color-text-hover: {{ settings.newsletter_popup_background_color }};
-}
+    --button-color-background: transparent;
+    --button-color-text: {{ settings.newsletter_popup_color }};
+    --button-color-border-hover: {{ settings.newsletter_popup_color }};
+    --button-color-background-hover: {{ settings.newsletter_popup_color }};
+    --button-color-text-hover: {{ settings.newsletter_popup_background_color }};
+  }
 
-{% assign morph_base_color = settings.newsletter_popup_color %}
+  {% assign morph_base_color = settings.newsletter_popup_color %}
   {% capture newsletter_popup_color_morphed %}{% comment %}Inject morph begin{% endcomment %}
-{%- capture _ -%}
+  {%- capture _ -%}
   {% comment %}
-    This adjusts the color to give it an appropriate difference from the original color.
-    It is usually used for link hover color, and things where we need to distinguish a change.
+  This adjusts the color to give it an appropriate difference from the original color.
+  It is usually used for link hover color, and things where we need to distinguish a change.
 
-    @param morph_base_color {Color}
-      The origin color to morph
+  @param morph_base_color {Color}
+  The origin color to morph
 
-    @param morph_adjustment {Number}
-      The number to multiply the lightness and saturation by. Default 2.
+  @param morph_adjustment {Number}
+  The number to multiply the lightness and saturation by. Default 2.
   {% endcomment %}
 
   {% if morph_adjustment == blank %}
-    {% assign morph_adjustment = 2 %}
+  {% assign morph_adjustment = 2 %}
   {% endif %}
 
   {% assign morph_adjustment = morph_adjustment | times: 1.0 %}
@@ -297,157 +297,169 @@
   {% assign color_lightness = morph_base_color | color_extract: 'lightness' %}
 
   {% if color_lightness > 20.0 %}
-    {% if color_lightness > 50.0 %}
-      {% assign light_adjustment = color_lightness | divided_by: 25.0 | times: morph_adjustment %}
-    {% else %}
-      {% assign light_adjustment = color_lightness | divided_by: 15.0 | times: morph_adjustment %}
-    {% endif %}
-    {% assign new_color = morph_base_color | color_darken: light_adjustment %}
+  {% if color_lightness > 50.0 %}
+  {% assign light_adjustment = color_lightness | divided_by: 25.0 | times: morph_adjustment %}
   {% else %}
-    {% if color_lightness < 7.0 %}
-      {% assign light_adjustment = 3.0 | times: morph_adjustment %}
-      {% assign new_color = morph_base_color | color_desaturate: 45.0 %}
-    {% elsif color_lightness < 12.0 %}
-      {% assign light_adjustment = 2.25 | times: morph_adjustment %}
-      {% assign new_color = morph_base_color | color_desaturate: 15.0 %}
-    {% else %}
-      {% assign light_adjustment = 1.75 | times: morph_adjustment %}
-      {% assign new_color = morph_base_color %}
-    {% endif %}
-    {% assign new_color = new_color | color_lighten: light_adjustment %}
+  {% assign light_adjustment = color_lightness | divided_by: 15.0 | times: morph_adjustment %}
+  {% endif %}
+  {% assign new_color = morph_base_color | color_darken: light_adjustment %}
+  {% else %}
+  {% if color_lightness < 7.0 %}
+  {% assign light_adjustment = 3.0 | times: morph_adjustment %}
+  {% assign new_color = morph_base_color | color_desaturate: 45.0 %}
+  {% elsif color_lightness < 12.0 %}
+  {% assign light_adjustment = 2.25 | times: morph_adjustment %}
+  {% assign new_color = morph_base_color | color_desaturate: 15.0 %}
+  {% else %}
+  {% assign light_adjustment = 1.75 | times: morph_adjustment %}
+  {% assign new_color = morph_base_color %}
+  {% endif %}
+  {% assign new_color = new_color | color_lighten: light_adjustment %}
   {% endif %}
   {% assign morph_base_color = blank %}
   {% assign morph_adjustment = blank %}
-{%- endcapture -%}
-{{ new_color }}
-{% comment %}Inject morph end{% endcomment %}
-{% endcapture %}
-.newsletter-popup__button--highlighted {
-  --button-color-border: {{ settings.newsletter_popup_color }};
-  --button-color-background: {{ settings.newsletter_popup_color }};
-  --button-color-text: {{ settings.newsletter_popup_background_color }};
-  --button-color-border-hover: {{ newsletter_popup_color_morphed }};
-  --button-color-background-hover: {{ newsletter_popup_color_morphed }};
-  --button-color-text-hover: {{ settings.newsletter_popup_background_color }};
-}
+  {%- endcapture -%}
+  {{ new_color }}
+  {% comment %}Inject morph end{% endcomment %}
+  {% endcapture %}
+  .newsletter-popup__button--highlighted {
+    --button-color-border: {{ settings.newsletter_popup_color }};
+      --button-color-background: {{ settings.newsletter_popup_color }};
+      --button-color-text: {{ settings.newsletter_popup_background_color }};
+      --button-color-border-hover: {{ newsletter_popup_color_morphed }};
+      --button-color-background-hover: {{ newsletter_popup_color_morphed }};
+      --button-color-text-hover: {{ settings.newsletter_popup_background_color }};
+    }
 
-/* Newsletter section above footer */
-.newsletter_section {
-  transform: translate3d(0, 0, 0);
-  background-color: {{ settings.newsletter_section_background_color }};
-  color: {{ settings.newsletter_section_color }};
-}
+    /* Newsletter section above footer */
+    .newsletter_section {
+      transform: translate3d(0, 0, 0);
+      background-color: {{ settings.newsletter_section_background_color }};
+      color: {{ settings.newsletter_section_color }};
+    }
 
-.newsletter_section h2 {
-  margin-top: 0;
-  color: {{ settings.newsletter_section_color }};
-}
+    .newsletter_section h2 {
+      margin-top: 0;
+      color: {{ settings.newsletter_section_color }};
+    }
 
-.newsletter_section.newsletter-bgr-true {
-  background-color: {{ settings.newsletter_section_background_color }};
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.newsletter_section.newsletter-bgr-true input.contact_email[type=email] {
-  border: 0;
-}
-@media only screen and (max-width: 480px) {
-  .newsletter_section.newsletter-bgr-true {
-    text-align: center !important;
-  }
-}
+    .newsletter_section.newsletter-bgr-true {
+      background-color: {{ settings.newsletter_section_background_color }};
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .newsletter_section.newsletter-bgr-true input.contact_email[type=email] {
+      border: 0;
+    }
+    @media only screen and (max-width: 480px) {
+      .newsletter_section.newsletter-bgr-true {
+        text-align: center !important;
+      }
+    }
 
-.section_form {
-  padding: 10px 20px;
-}
-.section_form input[type=email],
-.section_form input[type=text] {
-  border: 0;
-}
-.section_form .newsletter-text + .newsletter, .section_form h5 + .newsletter {
-  margin-top: 15px;
-}
+    .section_form {
+      padding: 10px 20px;
+    }
+    .section_form input[type=email],
+    .section_form input[type=text] {
+      border: 0;
+    }
+    .section_form .newsletter-text + .newsletter, .section_form h5 + .newsletter {
+      margin-top: 15px;
+    }
 
-.newsletter_section h5 {
-  color: {{ settings.newsletter_section_color }} !important;
-  padding-top: 0px;
-  margin: 0;
-}
+    .newsletter_section h5 {
+      color: {{ settings.newsletter_section_color }} !important;
+      padding-top: 0px;
+      margin: 0;
+    }
 
-.newsletter_section .newsletter-text p {
-  margin-bottom: 0;
-}
+    .newsletter_section .newsletter-text p {
+      margin-bottom: 0;
+    }
 
-.newsletter_section .newsletter,
-.password-page-row form {
-  display: inline-block;
-  padding-top: 0 !important;
-  width: 450px;
-}
-@media only screen and (max-width: 480px) {
-  .newsletter_section .newsletter,
-.password-page-row form {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .newsletter_section .newsletter,
-.password-page-row form {
-    width: 100%;
-  }
-}
+    .newsletter_section .newsletter,
+    .password-page-row form {
+      display: inline-block;
+      padding-top: 0 !important;
+      width: 450px;
+    }
+    @media only screen and (max-width: 480px) {
+      .newsletter_section .newsletter,
+      .password-page-row form {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+      .newsletter_section .newsletter,
+      .password-page-row form {
+        width: 100%;
+      }
+    }
 
-.shopify-challenge__container {
-  padding: 150px 0;
-}
-.shopify-challenge__container .shopify-challenge__button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid;
-  padding: 13px 20px;
-  text-align: center;
-  line-height: 1.2;
-  font-family: {{ settings.nav__font.family }}, {{ settings.nav__font.fallback_families }};
-  font-weight: {{ settings.button_weight }};
-  font-style: {{ settings.nav__font.style }};
-  font-size: {{ settings.button_font_size | append: 'px' }};
-  text-transform: {{ settings.button_font_style }};
-  letter-spacing: {{ settings.nav_letter_spacing | append: 'px' }};
-  word-break: break-word;
-  cursor: pointer;
-  transition: all 0.2s linear;
-  border-color: var(--button-color-border, {{ settings.btn_color }});
-  background: var(--button-color-background, {{ settings.btn_color }});
-  color: var(--button-color-text, {{ settings.btn_text_color }});
-}
-{%- if settings.button_style == 'rounded' -%}
-.shopify-challenge__container .shopify-challenge__button {
-    border-radius: 3px;
-  }
-{%- elsif settings.button_style == "pill_shaped" -%}
-.shopify-challenge__container .shopify-challenge__button {
-    border-radius: 100px;
-  }
-{%- else -%}
-.shopify-challenge__container .shopify-challenge__button {
-    border-radius: 0;
-  }
-{%- endif -%}
-.shopify-challenge__container .shopify-challenge__button:visited {
-  color: var(--button-color-text, {{ settings.btn_text_color }});
-}
-.shopify-challenge__container .shopify-challenge__button:hover:not([disabled]), .shopify-challenge__container .shopify-challenge__button:active {
-  background: var(--button-color-background-hover, var(--button-color-background, {{ settings.btn_hover_color }}));
-  border-color: var(--button-color-border-hover, var(--button-color-border, {{ settings.btn_hover_color }}));
-  color: var(--button-color-text-hover, var(--button-color-text, {{ settings.btn_text_color }}));
-}
-.shopify-challenge__container .shopify-challenge__button:active {
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-  outline: 0;
-}
-.shopify-challenge__container .shopify-challenge__button[disabled] {
-  cursor: not-allowed;
-}
+    .shopify-challenge__container {
+      padding: 150px 0;
+    }
+    .shopify-challenge__container .shopify-challenge__button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid;
+      padding: 13px 20px;
+      text-align: center;
+      line-height: 1.2;
+      font-family: {{ settings.nav__font.family }}, {{ settings.nav__font.fallback_families }};
+      font-weight: {{ settings.button_weight }};
+      font-style: {{ settings.nav__font.style }};
+      font-size: {{ settings.button_font_size | append: 'px' }};
+      text-transform: {{ settings.button_font_style }};
+      letter-spacing: {{ settings.nav_letter_spacing | append: 'px' }};
+      word-break: break-word;
+      cursor: pointer;
+      transition: all 0.2s linear;
+      border-color: var(--button-color-border, {{ settings.btn_color }});
+        background: var(--button-color-background, {{ settings.btn_color }});
+          color: var(--button-color-text, {{ settings.btn_text_color }});
+            }
+    {%- if settings.button_style == 'rounded' -%}
+    .shopify-challenge__container .shopify-challenge__button {
+      border-radius: 3px;
+    }
+    {%- elsif settings.button_style == "pill_shaped" -%}
+    .shopify-challenge__container .shopify-challenge__button {
+      border-radius: 100px;
+    }
+    {%- else -%}
+    .shopify-challenge__container .shopify-challenge__button {
+      border-radius: 0;
+    }
+    {%- endif -%}
+    .shopify-challenge__container .shopify-challenge__button:visited {
+      color: var(--button-color-text, {{ settings.btn_text_color }});
+        }
+    .shopify-challenge__container .shopify-challenge__button:hover:not([disabled]), .shopify-challenge__container .shopify-challenge__button:active {
+      background: var(--button-color-background-hover, var(--button-color-background, {{ settings.btn_hover_color }}));
+        border-color: var(--button-color-border-hover, var(--button-color-border, {{ settings.btn_hover_color }}));
+          color: var(--button-color-text-hover, var(--button-color-text, {{ settings.btn_text_color }}));
+            }
+    .shopify-challenge__container .shopify-challenge__button:active {
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+      outline: 0;
+    }
+    .shopify-challenge__container .shopify-challenge__button[disabled] {
+      cursor: not-allowed;
+    }
+
+
+
+
+
+
+
+
+    .fancybox-is-open div:empty{
+      display:block;
+
+    }

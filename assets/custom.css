@@ -55,8 +55,8 @@
   max-width: 740px;
   padding: 0;
 }.newsletter__lightbox .fancybox-content {
-    border: 5px solid ;
-  }@media only screen and (max-width: 480px) {
+  border: 5px solid ;
+}@media only screen and (max-width: 480px) {
   .newsletter__lightbox .fancybox-close-small {
     display: block;
   }
@@ -220,9 +220,9 @@
   margin-top: 10px;
   margin-bottom: 0;
 }.newsletter-popup__button {
-    margin-left: 8px;
-    margin-right: 8px;
-  }@media only screen and (max-width: 480px) {
+  margin-left: 8px;
+  margin-right: 8px;
+}@media only screen and (max-width: 480px) {
   .newsletter-popup__button {
     margin-top: 5px;
   }
@@ -230,135 +230,147 @@
 
 .newsletter-popup__button--text {
   --button-color-border: ;
-  --button-color-background: transparent;
-  --button-color-text: ;
-  --button-color-border-hover: ;
-  --button-color-background-hover: ;
-  --button-color-text-hover: ;
-}
-
+    --button-color-background: transparent;
+    --button-color-text: ;
+    --button-color-border-hover: ;
+    --button-color-background-hover: ;
+    --button-color-text-hover: ;
+  }
 
   
-.newsletter-popup__button--highlighted {
-  --button-color-border: ;
-  --button-color-background: ;
-  --button-color-text: ;
-  --button-color-border-hover: 
+  
+  .newsletter-popup__button--highlighted {
+    --button-color-border: ;
+      --button-color-background: ;
+      --button-color-text: ;
+      --button-color-border-hover: 
+
+  
+  ;
+      --button-color-background-hover: 
+
+  
+  ;
+      --button-color-text-hover: ;
+    }
+
+    /* Newsletter section above footer */
+    .newsletter_section {
+      transform: translate3d(0, 0, 0);
+      background-color: ;
+      color: ;
+    }
+
+    .newsletter_section h2 {
+      margin-top: 0;
+      color: ;
+    }
+
+    .newsletter_section.newsletter-bgr-true {
+      background-color: ;
+      background-position: center center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    .newsletter_section.newsletter-bgr-true input.contact_email[type=email] {
+      border: 0;
+    }
+    @media only screen and (max-width: 480px) {
+      .newsletter_section.newsletter-bgr-true {
+        text-align: center !important;
+      }
+    }
+
+    .section_form {
+      padding: 10px 20px;
+    }
+    .section_form input[type=email],
+    .section_form input[type=text] {
+      border: 0;
+    }
+    .section_form .newsletter-text + .newsletter, .section_form h5 + .newsletter {
+      margin-top: 15px;
+    }
+
+    .newsletter_section h5 {
+      color:  !important;
+      padding-top: 0px;
+      margin: 0;
+    }
+
+    .newsletter_section .newsletter-text p {
+      margin-bottom: 0;
+    }
+
+    .newsletter_section .newsletter,
+    .password-page-row form {
+      display: inline-block;
+      padding-top: 0 !important;
+      width: 450px;
+    }
+    @media only screen and (max-width: 480px) {
+      .newsletter_section .newsletter,
+      .password-page-row form {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+    @media only screen and (max-width: 480px) {
+      .newsletter_section .newsletter,
+      .password-page-row form {
+        width: 100%;
+      }
+    }
+
+    .shopify-challenge__container {
+      padding: 150px 0;
+    }
+    .shopify-challenge__container .shopify-challenge__button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid;
+      padding: 13px 20px;
+      text-align: center;
+      line-height: 1.2;
+      font-family: , ;
+      font-weight: ;
+      font-style: ;
+      font-size: px;
+      text-transform: ;
+      letter-spacing: px;
+      word-break: break-word;
+      cursor: pointer;
+      transition: all 0.2s linear;
+      border-color: var(--button-color-border, );
+        background: var(--button-color-background, );
+          color: var(--button-color-text, );
+            }.shopify-challenge__container .shopify-challenge__button {
+      border-radius: 0;
+    }.shopify-challenge__container .shopify-challenge__button:visited {
+      color: var(--button-color-text, );
+        }
+    .shopify-challenge__container .shopify-challenge__button:hover:not([disabled]), .shopify-challenge__container .shopify-challenge__button:active {
+      background: var(--button-color-background-hover, var(--button-color-background, ));
+        border-color: var(--button-color-border-hover, var(--button-color-border, ));
+          color: var(--button-color-text-hover, var(--button-color-text, ));
+            }
+    .shopify-challenge__container .shopify-challenge__button:active {
+      box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
+      outline: 0;
+    }
+    .shopify-challenge__container .shopify-challenge__button[disabled] {
+      cursor: not-allowed;
+    }
 
 
-;
-  --button-color-background-hover: 
 
 
-;
-  --button-color-text-hover: ;
-}
 
-/* Newsletter section above footer */
-.newsletter_section {
-  transform: translate3d(0, 0, 0);
-  background-color: ;
-  color: ;
-}
 
-.newsletter_section h2 {
-  margin-top: 0;
-  color: ;
-}
 
-.newsletter_section.newsletter-bgr-true {
-  background-color: ;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.newsletter_section.newsletter-bgr-true input.contact_email[type=email] {
-  border: 0;
-}
-@media only screen and (max-width: 480px) {
-  .newsletter_section.newsletter-bgr-true {
-    text-align: center !important;
-  }
-}
 
-.section_form {
-  padding: 10px 20px;
-}
-.section_form input[type=email],
-.section_form input[type=text] {
-  border: 0;
-}
-.section_form .newsletter-text + .newsletter, .section_form h5 + .newsletter {
-  margin-top: 15px;
-}
+    .fancybox-is-open div:empty{
+      display:block;
 
-.newsletter_section h5 {
-  color:  !important;
-  padding-top: 0px;
-  margin: 0;
-}
-
-.newsletter_section .newsletter-text p {
-  margin-bottom: 0;
-}
-
-.newsletter_section .newsletter,
-.password-page-row form {
-  display: inline-block;
-  padding-top: 0 !important;
-  width: 450px;
-}
-@media only screen and (max-width: 480px) {
-  .newsletter_section .newsletter,
-.password-page-row form {
-    width: 100%;
-    max-width: 100%;
-  }
-}
-@media only screen and (max-width: 480px) {
-  .newsletter_section .newsletter,
-.password-page-row form {
-    width: 100%;
-  }
-}
-
-.shopify-challenge__container {
-  padding: 150px 0;
-}
-.shopify-challenge__container .shopify-challenge__button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid;
-  padding: 13px 20px;
-  text-align: center;
-  line-height: 1.2;
-  font-family: , ;
-  font-weight: ;
-  font-style: ;
-  font-size: px;
-  text-transform: ;
-  letter-spacing: px;
-  word-break: break-word;
-  cursor: pointer;
-  transition: all 0.2s linear;
-  border-color: var(--button-color-border, );
-  background: var(--button-color-background, );
-  color: var(--button-color-text, );
-}.shopify-challenge__container .shopify-challenge__button {
-    border-radius: 0;
-  }.shopify-challenge__container .shopify-challenge__button:visited {
-  color: var(--button-color-text, );
-}
-.shopify-challenge__container .shopify-challenge__button:hover:not([disabled]), .shopify-challenge__container .shopify-challenge__button:active {
-  background: var(--button-color-background-hover, var(--button-color-background, ));
-  border-color: var(--button-color-border-hover, var(--button-color-border, ));
-  color: var(--button-color-text-hover, var(--button-color-text, ));
-}
-.shopify-challenge__container .shopify-challenge__button:active {
-  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.15), 0 1px 2px rgba(0, 0, 0, 0.05);
-  outline: 0;
-}
-.shopify-challenge__container .shopify-challenge__button[disabled] {
-  cursor: not-allowed;
-}
+    }
