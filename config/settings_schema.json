@@ -193,6 +193,209 @@
     ]
   },
   {
+    "name": "Popup",
+    "settings": [
+      {
+        "type": "paragraph",
+        "content": "To test the popup feature, set the number of days until the popup is displayed again to Test Mode."
+      },
+      {
+        "type": "checkbox",
+        "id": "newsletter_popup",
+        "label": "Enable popup"
+      },
+      {
+        "type": "checkbox",
+        "id": "newsletter_popup_close",
+        "label": "Show close icon",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "newsletter_popup_mobile",
+        "label": "Show popup on mobile"
+      },
+      {
+        "type": "checkbox",
+        "id": "newsletter_popup_form",
+        "label": "Show signup form",
+        "default": true
+      },
+      {
+        "type": "checkbox",
+        "id": "display_first_name",
+        "label": "Show first name"
+      },
+      {
+        "type": "checkbox",
+        "id": "display_last_name",
+        "label": "Show last name"
+      },
+      {
+        "type": "checkbox",
+        "id": "use_newsletter_border",
+        "label": "Use a border",
+        "default": true
+      },
+      {
+        "type": "image_picker",
+        "id": "newsletter_bg",
+        "label": "Image",
+        "info": "600 x 875px recommended"
+      },
+      {
+        "type": "select",
+        "id": "image_crop",
+        "label": "Image cropping",
+        "default": "none",
+        "info": "Only applied when image is larger\/wider than recommended",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "none",
+            "label": "None"
+          }
+        ]
+      },
+      {
+        "type": "select",
+        "id": "newsletter_popup_image_align",
+        "label": "Image position",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "left"
+      },
+      {
+        "type": "text",
+        "id": "newsletter_popup_title",
+        "label": "Title"
+      },
+      {
+        "type": "richtext",
+        "id": "newsletter_popup_text",
+        "label": "Text",
+        "default": "<p><\/p>"
+      },
+      {
+        "type": "select",
+        "id": "newsletter_popup_text_align",
+        "label": "Text alignment",
+        "options": [
+          {
+            "value": "left",
+            "label": "Left"
+          },
+          {
+            "value": "center",
+            "label": "Center"
+          },
+          {
+            "value": "right",
+            "label": "Right"
+          }
+        ],
+        "default": "center"
+      },
+      {
+        "type": "text",
+        "id": "popup_button1",
+        "label": "First button label"
+      },
+      {
+        "type": "url",
+        "id": "popup_button1_link",
+        "label": "First button link",
+        "info": "Leave blank for a close button"
+      },
+      {
+        "type": "checkbox",
+        "id": "popup_button1_highlight",
+        "label": "Highlight first button"
+      },
+      {
+        "type": "text",
+        "id": "popup_button2",
+        "label": "Second button label"
+      },
+      {
+        "type": "url",
+        "id": "popup_button2_link",
+        "label": "Second button link",
+        "info": "Leave blank for a close button"
+      },
+      {
+        "type": "checkbox",
+        "id": "popup_button2_highlight",
+        "label": "Highlight second button"
+      },
+      {
+        "type": "range",
+        "id": "newsletter_popup_seconds",
+        "label": "Popup delay",
+        "min": 0,
+        "max": 120,
+        "step": 2,
+        "default": 2,
+        "unit": "sec"
+      },
+      {
+        "type": "select",
+        "id": "newsletter_popup_days",
+        "label": "Days until popup is displayed again",
+        "options": [
+          {
+            "value": "0",
+            "label": "Test Mode"
+          },
+          {
+            "value": "2",
+            "label": "2 days"
+          },
+          {
+            "value": "7",
+            "label": "7 days"
+          },
+          {
+            "value": "14",
+            "label": "14 days"
+          },
+          {
+            "value": "30",
+            "label": "30 days"
+          },
+          {
+            "value": "90",
+            "label": "90 days"
+          },
+          {
+            "value": "365",
+            "label": "365 days"
+          }
+        ],
+        "default": "30"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.layout.name",
     "settings": [
       {
