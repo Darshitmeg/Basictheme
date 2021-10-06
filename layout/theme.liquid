@@ -171,7 +171,39 @@
     {%- if settings.predictive_search_enabled -%}
       <script src="{{ 'predictive-search.js' | asset_url }}" defer="defer"></script>
     {%- endif -%}
-    
+    <script src="{{ 'instantclick.min.js' | asset_url }}" data-no-instant defer></script>
+
+      <script data-no-instant>
+        window.addEventListener('DOMContentLoaded', function() {
+
+          function inIframe() {
+            try {
+              return window.self !== window.top;
+            } catch (e) {
+              return true;
+            }
+          }
+
+          if (!inIframe()){
+            InstantClick.on('change', function() {
+
+              $('head script[src*="shopify"]').each(function() {
+                var script = document.createElement('script');
+                script.type = 'text/javascript';
+                script.src = $(this).attr('src');
+
+                $('body').append(script);
+              });
+
+              $('body').removeClass('fancybox-active');
+              $.fancybox.destroy();
+
+              InstantClick.init();
+
+            });
+          }
+        });
+      </script>
     
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script>
