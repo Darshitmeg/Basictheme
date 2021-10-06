@@ -266,3 +266,6 @@
       display:block;
 
     }
+    body.gradient.fancybox-active.compensate-for-scrollbar {
+      display: unset;
+    }
