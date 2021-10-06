@@ -14,7 +14,7 @@
     "display_first_name": true,
     "display_last_name": true,
     "newsletter_bg": "shopify:\/\/shop_images\/pexels-andrea-piacquadio-845434.jpg",
-    "newsletter_popup_seconds": 10,
+    "newsletter_popup_seconds": 0,
     "newsletter_popup_days": "0",
     "page_width": "1200",
     "social_twitter_link": "https:\/\/twitter.com\/shopify",
