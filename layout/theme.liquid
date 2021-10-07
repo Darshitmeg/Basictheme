@@ -217,7 +217,17 @@
       {% render 'popup-newsletter' %}
     {% endif %}
     <div>
-    {{ collections['frontpage'].all.products.id }}
+
+      <ul>
+        {% for product in collections.all.products limit: 8 %}
+        <li>
+
+          <a class="shop-now" href="{{ product.url }}">{{ product.title | escape }} 
+          </a> 
+        </li>
+        {% endfor %}
+      </ul>
+
     </div>
     
   </body>
