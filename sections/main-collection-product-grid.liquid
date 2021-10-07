@@ -18,16 +18,7 @@
 {%- endif -%}
 
  
-<ul>
-{% for product in collections.all.products limit: 8 %}
-<li>
 
-<a class="shop-now" href="{{ product.url }}">{{ product.title | escape }} 
-</a> 
-</li>
-{% endfor %}
-</ul>
-{{ all_products['accessories'].title }}
 
 <div id="ProductGridContainer">
   {%- paginate collection.products by section.settings.products_per_page -%}
