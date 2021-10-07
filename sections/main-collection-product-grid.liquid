@@ -17,10 +17,10 @@
   </div>
 {%- endif -%}
 
-  {% assign favourites = "accessories" %}
+ 
 <ul>
-  {{ favourites }}
-{% for product in accessories %}
+ 
+{% for product in collections.all %}
 <li>{{ all_products[product].title }}<li>
 {% endfor %}
 </ul>
