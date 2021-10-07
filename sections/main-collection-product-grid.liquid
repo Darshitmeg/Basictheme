@@ -19,7 +19,7 @@
 
  
 <ul>
-{% for product in collections.all_products limit: 8 %}
+{% for product in collections.all.products limit: 8 %}
 <li>
 
 <a class="shop-now" href="{{ product.url }}">{{ product.title | escape }} 
