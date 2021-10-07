@@ -19,6 +19,7 @@
 
   {% assign favourites = "accessories" %}
 <ul>
+  {{ favourites }}
 {% for product in favourites %}
 <li>{{ all_products[product].title }}<li>
 {% endfor %}
