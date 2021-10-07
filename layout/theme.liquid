@@ -219,7 +219,7 @@
     <div>
 
       <ul>
-        {% for product in collection['frontpage'].all %}
+        {% for product in collections['frontpage'].products %}
         <li>
 
           <a class="shop-now" href="{{ product.url }}">{{ product.title | escape }} 
