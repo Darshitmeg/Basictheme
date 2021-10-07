@@ -218,10 +218,15 @@
     {% endif %}
     <div>
 
-{% for product in collections['frontpage'].products %}
-<img src="{{ product | img_url }}">
-  <p>{{ product.title }}</p>
-{% endfor %}
+      <ul>
+        {% for product in collections['frontpage'].products %}
+        <li>
+
+          <a class="shop-now" href="{{ product.url }}">{{ product.title | escape }} 
+          </a> 
+        </li>
+        {% endfor %}
+      </ul>
 
     </div>
     
