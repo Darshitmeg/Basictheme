@@ -225,7 +225,7 @@
         <variant-radios class="no-js-hidden" data-section="{{ section.id }}" data-url="{{ product.url }}" {{ block.shopify_attributes }}>
                   {%- for option in product.options_with_values -%}
                       <fieldset class="js product-form__input swatch {{ option.name | downcase }}">
-                        <legend class="form__label">{{ option.name }} :<span> {{ option.value }} </span></legend>
+                        <legend class="form__label">ttt{{ option.name }} :<span> {{ option.value }} </span></legend>
                         {%- for value in option.values -%}
                           <input type="radio" id="{{ section.id }}-{{ option.name }}-{{ forloop.index0 }}"
                                 name="{{ option.name }}"
