@@ -1,40 +1,20 @@
-<section class="drawer" id="drawer-name" data-drawer-target>
-  <div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
-  <div class="drawer__wrapper">
-    <div class="drawer__header">
-      <div class="drawer__title">
-        Continue Shopping
+<cart-notification>
+  <div class="cart-notification-wrapper page-width{% if color_scheme %} color-{{ color_scheme }}{% endif %}">
+    <div id="cart-notification" class="cart-notification focus-inset" aria-modal="true" aria-label="{{ 'general.cart.item_added' | t }}" role="dialog" tabindex="-1">
+      <div class="cart-notification__header">
+        <h2 class="cart-notification__heading caption-large">{%- render 'icon-checkmark' -%} {{ 'general.cart.item_added' | t }}</h2>
+        <button type="button" class="cart-notification__close modal__close-button link link--text focus-inset" aria-label="{{ 'accessibility.close' | t }}">
+          <svg class="icon icon-close" aria-hidden="true" focusable="false"><use href="#icon-close"></svg>
+        </button>
       </div>
-      <button class="drawer__close" data-drawer-close aria-label="Close Drawer"></button>
-    </div>
-    <div class="drawer__content" id="cart__drawer">
-      <div id="cart__drawer_items">
-      </div>
-      <div style="margin-top: 50px">
-        <h4>Total: <span id="cart__total_price"></span></h4>
-        <a id="cart__checkout_btn" href="/checkout" class="btn btn--has-icon-after cart__continue-btn" style="width:100%;">Proceed Checkout</a>
+      <div id="cart-notification-product" class="cart-notification-product"></div>
+      <div class="cart-notification__links">
+        <a href="{{ routes.cart_url }}" id="cart-notification-button" class="button button--secondary button--full-width"></a>
+        <form action="{{ routes.cart_url }}" method="post" id="cart-notification-form">
+          <button class="button button--primary button--full-width" name="checkout">{{ 'sections.cart.checkout' | t }}</button>
+        </form>
+        <button type="button" class="link button-label">{{ 'general.continue_shopping' | t }}</button>
       </div>
     </div>
   </div>
-</section>
-
-
-<script>
-  fetch('/cart.js')
-  .then((resp) => resp.json())
-  .then((data) => {
-    
-    if(data.items.length > 0) {
-        data.items.forEach(function(product, index) { 
-          document.getElementById('drawer_cart_items').innerHTML = '<img src="' + product.featured_image.url + '" alt="' + product.featured_image.alt + '"><h5>' + product.title + '</h5><p>' + product.quantity + ' x ' + theme.Currency.formatMoney(product.line_price, theme.moneyFormat) + '</p>';
-      	});
-    } else {
-      document.getElementById('drawer_cart_items').innerHTML = '<p>Cart is empty</p>';
-      document.getElementById('drawer_checkout_btn').setAttribute('disabled', 'disabled');
-      document.getElementById('drawer_checkout_btn').style.pointerEvents = 'none';
-    }
-    
-    document.getElementById('drawer_total_amount').innerHTML = theme.Currency.formatMoney(data.total_price, theme.moneyFormat);
-    
-  });
-</script>
+</cart-notification>
